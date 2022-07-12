@@ -1,0 +1,84 @@
+body {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 740px;
+  padding: 20px;
+  width: 1100px;
+}
+
+.title {
+  color: black;
+  font-family: STHupo;
+  font-size: 80px;
+  font-weight: 550;
+  margin-top: 30px;
+}
+
+.input {
+  background-color: black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+
+}
+
+.input-name {
+  background-color: white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 50px;
+  font-family: Bahnschrift;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.submit {
+  background-color: transparent;
+  border-color: black;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 40px;
+  font-family: STHupo;
+  height: 70px;
+  margin-top: 38px;
+  // outline: 0;
+  text-align: center;
+  width: 30%;
+}
+
+.submit:active {
+  background-color: black;
+  color: white;
+}
+
+.btn-center{
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'STHupo';
+    src: url('STHupo.woff2') format('woff2'),
+        url('STHupo.woff') format('woff');
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CryptoDevEffect</title>
+    <link rel="stylesheet" href="static/cdl.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.js"></script>
+
+</head>
+<body>
+
+    <div class="form">
+
+      <div class="title">CryptoDevLand!</div>
+        <br>
+        <br>
+        <br>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            {{ form.applicant_name(class="input-name", placeholder="Applicant Name") }}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            {{ form.top_left_x(class="input", placeholder="Top-Left X-Coordinate") }}
+
+            {{ form.top_left_y(class="input", placeholder="Top-Left Y-Coordinate") }}
+
+            {{ form.height(class="input", placeholder="Height of your land grab") }}
+
+            {{ form.width(class="input", placeholder="Width of your land grab") }}
+
+            <br>
+            <div class="btn-center">{{ form.submit(class="submit") }}</div>
+
+        </form>
+    </div>
+
+    <div>
+                {% with messages = get_flashed_messages(category_filter=["success"]) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                                <script>
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: '{{ message }}',
+                                        confirmButtonColor: 'black',
+                                        confirmButtonText: 'Yippee!',
+                                        backdrop: `rgba(9, 243, 123, 0.8)`,
+                                    })
+                                </script>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% with messages = get_flashed_messages(category_filter=["error"]) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                                <script>
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: '{{ message }}',
+                                        confirmButtonColor: 'black',
+                                        confirmButtonText: 'Aw Man!',
+                                        backdrop: `rgba(223, 41, 3, 0.8)`,
+                                    })
+                                </script>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+    </div>
+</body>
+</html>
