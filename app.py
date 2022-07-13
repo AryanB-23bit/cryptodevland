@@ -6,7 +6,7 @@ from wtforms.validators import InputRequired, NumberRange
 from flask_sqlalchemy import SQLAlchemy
 import pickle
 
-# making an instance of a Flask app
+# making an instance of a Flask app and config
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///landgrab.db'
