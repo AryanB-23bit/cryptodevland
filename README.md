@@ -4,7 +4,7 @@ This repo can be downloaded and be run locally.
 
 Make sure to install requirements from requirements.txt
 
-To init the database:
+To init the database(app already has db included, delete the file and run the following) :
   
 	Be in the directory that has app.py
 	
